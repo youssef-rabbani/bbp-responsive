@@ -37,7 +37,7 @@ require(["js/qlik"], function (qlik) {
 	//callbacks -- inserted here --
 	//open apps -- inserted here --
 
-	var app = qlik.openApp('11b8de55-34fe-40eb-9685-ee40438e4478', config);
+	var app = qlik.openApp('BBP.qvf', config);
 
 
 
