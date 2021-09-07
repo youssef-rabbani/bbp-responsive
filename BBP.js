@@ -41,14 +41,18 @@ require(["js/qlik"], function (qlik) {
 
 
 
+
+
 	
-		app.bookmark.apply('d5075247-4a67-4264-9a0b-7cc5b200c78c');
+		app.bookmark.apply('60d86ae5-76f0-4c12-a757-4bb0df740d6b');
 	
 	
 	//create cubes and lists -- inserted here --
 
 			//get objects -- inserted here --
-	app.getObject('QV-0-1','AWxPD');
+	app.getObject('QV-0-1','76b28306-474b-4094-b551-ed3fe47d3b5a');
+	
+	
 	
 	
 	app.getObject('C-2','b8a0451e-7d0d-490d-a92f-67c6edae10f2');
