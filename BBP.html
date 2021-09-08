@@ -14,45 +14,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta http-equiv="cleartype" content="on" />
-    <!--Polymer stuff -->
-    <script src="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" cmj="" href="qliksense-card.html" />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/iron-flex-layout/iron-flex-layout-classes.html"
-    />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/paper-header-panel/paper-header-panel.html"
-    />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/paper-toolbar/paper-toolbar.html"
-    />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/paper-drawer-panel/paper-drawer-panel.html"
-    />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/paper-icon-button/paper-icon-button.html"
-    />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/iron-icons/iron-icons.html"
-    />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/iron-pages/iron-pages.html"
-    />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/paper-menu/paper-menu.html"
-    />
-    <link
-      rel="import"
-      href="https://cdn.rawgit.com/download/polymer-cdn/1.7.0.2/lib/paper-item/paper-item.html"
-    />
+
+
     <link rel="import" href="polymer-mixins.html" />
     <style is="custom-style" include="iron-flex iron-positioning"></style>
     <style is="custom-style" include="polymer-mixins"></style>
@@ -272,103 +236,8 @@
         $("#Market").show();
         $("#KPI-1").show();
       });
-      function BtnClickSwitch(thisBtn, OtherBtn, leftBtn, rightBtn) {
-        OtherBtn.css("background-color", "");
-        OtherBtn.css("color", "");
-        OtherBtn.css("z-index", "100");
-        OtherBtn.css("border-radius", "20px");
-        OtherBtn.css("width", "120px");
-        OtherBtn.css("font-size", "10px");
 
-        thisBtn.css("background-color", "RGB(116,116,247)");
-        thisBtn.css("color", "white");
-        thisBtn.css("z-index", "1000");
-        thisBtn.css("border-radius", "20px");
-        thisBtn.css("width", "120px");
-        thisBtn.css("font-size", "10px");
-
-        rightBtn.css("margin-left", "-10px");
-
-        leftBtn.css("margin-right", "-10px");
-      }
-      $(document).ready(function () {
-        $("#selectSourceMarket-1").click(function () {
-          $("#sourceMarket-1").show();
-          $("#destination-1").hide();
-          var thisBtn = $("#selectSourceMarket-1");
-          var otherBtn = $("#selectDestination-1");
-          BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-        });
-        $("#selectDestination-1").click(function () {
-          $("#sourceMarket-1").hide();
-          $("#destination-1").show();
-          var thisBtn = $("#selectDestination-1");
-          var otherBtn = $("#selectSourceMarket-1");
-          BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-        });
-      });
-      $(document).ready(function () {
-        $("#selectSourceMarket-2").click(function () {
-          $("#sourceMarket-2").show();
-          $("#destination-2").hide();
-          var thisBtn = $("#selectSourceMarket-2");
-          var otherBtn = $("#selectDestination-2");
-          BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-        });
-        $("#selectDestination-2").click(function () {
-          $("#sourceMarket-2").hide();
-          $("#destination-2").show();
-          var thisBtn = $("#selectDestination-2");
-          var otherBtn = $("#selectSourceMarket-2");
-          BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-        });
-      });
-
-      $(document).ready(function () {
-        $("#selectSourceMarket-3").click(function () {
-          $("#sourceMarket-3").show();
-          $("#destination-3").hide();
-          var thisBtn = $("#selectSourceMarket-3");
-          var otherBtn = $("#selectDestination-3");
-          BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-        });
-        $("#selectDestination-2").click(function () {
-          $("#sourceMarket-3").hide();
-          $("#destination-3").show();
-          var thisBtn = $("#selectDestination-3");
-          var otherBtn = $("#selectSourceMarket-3");
-          BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-        });
-      });
-
-      $(document).ready(function () {
-        $("#selectSpend").click(function () {
-          $("#divSpend").show();
-          $("#divConsideration").hide();
-          $("#divDigital").hide();
-          var thisBtn = $("#selectSpend");
-          var otherBtn1 = $("#selectConsideration");
-          var otherBtn2 = $("#selectDigital");
-          BtnClickSwitch(thisBtn, otherBtn1, thisBtn, otherBtn1);
-          BtnClickSwitch(thisBtn, otherBtn2, thisBtn, otherBtn2);
-          otherBtn2.css("margin-left", "-20px");
-        });
-      });
-
-      $(document).ready(function () {
-        $("#selectConsideration").click(function () {
-          $("#divSpend").hide();
-          $("#divConsideration").show();
-          $("#divDigital").hide();
-          var otherBtn1 = $("#selectSpend");
-          var thisBtn = $("#selectConsideration");
-          var otherBtn2 = $("#selectDigital");
-          BtnClickSwitch(thisBtn, otherBtn1, otherBtn1, thisBtn);
-          BtnClickSwitch(thisBtn, otherBtn2, otherBtn2, thisBtn);
-        });
-      });
-
-      $(function () {
+     
         $(document).ready(function () {
           $(".fa-caret-down").on("click", function () {
             if ($(this).hasClass("fa-caret-down")) {
@@ -379,128 +248,11 @@
           });
         });
 
-        $(document).ready(function () {
-          $("#selectDigital").click(function () {
-            $("#divSpend").hide();
-            $("#divConsideration").hide();
-            $("#divDigital").show();
-            var otherBtn1 = $("#selectSpend");
-            var otherBtn2 = $("#selectConsideration");
-            var thisBtn = $("#selectDigital");
-            BtnClickSwitch(thisBtn, otherBtn1, thisBtn, otherBtn2);
-            BtnClickSwitch(thisBtn, otherBtn2, thisBtn, otherBtn1);
-          });
-        });
-
-        $(document).ready(function () {
-          $("#selectAbsolute").click(function () {
-            console.log("hello");
-            $("#absolute").show();
-            $("#relative").hide();
-            var thisBtn = $("#selectAbsolute");
-            var otherBtn = $("#selectRelative");
-            BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-          });
-          $("#selectRelative").click(function () {
-            console.log("hello2");
-            $("#absolute").hide();
-            $("#relative").show();
-            var thisBtn = $("#selectRelative");
-            var otherBtn = $("#selectAbsolute");
-            BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-          });
-        });
-
-        $(document).ready(function () {
-          $("#btnTargets").click(function () {
-            $("#divTargets").show();
-            $("#divPackages").hide();
-            var thisBtn = $("#btnTargets");
-            var otherBtn = $("#btnPackages");
-            BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-          });
-          $("#btnPackages").click(function () {
-            $("#divTargets").hide();
-            $("#divPackages").show();
-            var thisBtn = $("#btnPackages");
-            var otherBtn = $("#btnTargets");
-            BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-          });
-        });
-
-        $(document).ready(function () {
-          $("#btnDrivers").click(function () {
-            $("#divDrivers").show();
-            $("#divCategories").hide();
-            var thisBtn = $("#btnDrivers");
-            var otherBtn = $("#btnCategories");
-            BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-          });
-          $("#btnCategories").click(function () {
-            $("#divDrivers").hide();
-            $("#divCategories").show();
-            var thisBtn = $("#btnCategories");
-            var otherBtn = $("#btnDrivers");
-            BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-          });
-        });
-
-        $(document).ready(function () {
-          $("#selectSourceMarket-12").click(function () {
-            $("#sourceMarket-12").show();
-            $("#destination-12").hide();
-            var thisBtn = $("#selectSourceMarket-12");
-            var otherBtn = $("#selectDestination-12");
-            BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-          });
-          $("#selectDestination-12").click(function () {
-            $("#sourceMarket-12").hide();
-            $("#destination-12").show();
-            var thisBtn = $("#selectDestination-12");
-            var otherBtn = $("#selectSourceMarket-12");
-            BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-          });
-        });
-        $(document).ready(function () {
-          $("#selectSourceMarket-22").click(function () {
-            $("#sourceMarket-22").show();
-            $("#destination-22").hide();
-            var thisBtn = $("#selectSourceMarket-22");
-            var otherBtn = $("#selectDestination-22");
-            BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-          });
-          $("#selectDestination-22").click(function () {
-            $("#sourceMarket-22").hide();
-            $("#destination-22").show();
-            var thisBtn = $("#selectDestination-22");
-            var otherBtn = $("#selectSourceMarket-22");
-            BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-          });
-        });
-
-        var thisBtn = $("#selectAvailability");
-        var otherBtn = $("#selectExperience");
-        BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
-      });
 
       $(document).ready(function () {
-        $("#selectAvailability").click(function () {
-          $("#availability").show();
-          $("#experience").hide();
-          var thisBtn = $("#selectAvailability");
-          var otherBtn = $("#selectExperience");
-          BtnClickSwitch(thisBtn, otherBtn, otherBtn, thisBtn);
+		$("#selectSourceMarket-1").click(function () {
+          
         });
-        $("#selectExperience").click(function () {
-          $("#availability").hide();
-          $("#experience").show();
-          var thisBtn = $("#selectExperience");
-          var otherBtn = $("#selectAvailability");
-          BtnClickSwitch(thisBtn, otherBtn, thisBtn, otherBtn);
-        });
-      });
-
-      $(document).ready(function () {
         $(".PaperTitleItem").on("click", function () {
           $(".PaperTitleItem").removeClass("PaperTitleSelectedItem");
           $(".paper-body").removeClass("iron-selected");
@@ -509,9 +261,10 @@
             case "btnTourismPerformance":
               $("#pgTourismPerformance").addClass("iron-selected");
               break;
-              jj;
+              
             case "btnInspire":
-              $("#pgInspire").addClass("iron-selected");
+			alert("trigg");
+              $("#pg2").tab("show");
 
               break;
             case "btnInspire2":
@@ -593,17 +346,6 @@
       });
 
       $(document).ready(function () {
-        $("#selectDigital").click();
-        $("#selectSourceMarket-1").click();
-        $("#selectSourceMarket-2").click();
-        $("#selectSourceMarket-3").click();
-        $("#selectSourceMarket-12").click();
-        $("#selectSourceMarket-22").click();
-        $("#selectExperience").click();
-        $("#selectAbsolute").click();
-        $("#selectSpend").click();
-        $("#btnTargets").click();
-        $("#btnDrivers").click();
         $("#Market").click();
       });
     </script>
@@ -651,11 +393,12 @@
           </li>
           <li id="navli2">
             <a
+			id="btnInspire"
               data-toggle="pill"
               href="#pg2"
               style="display: flex; justify-content: center"
-              >STA BBP Domains</a
-            >
+              >STA BBP Domains</a>
+            
           </li>
         </ul>
       </div>
@@ -733,7 +476,15 @@
                 <div class="row">
                   <div class="col-xs-12" id="div1">
                     <div class="item bg-dark" id="sec1">
-                      <div class="row" style="height: 35px; padding: 0px 16px; display: flex; align-items: center;">
+                      <div
+                        class="row"
+                        style="
+                          height: 35px;
+                          padding: 0px 16px;
+                          display: flex;
+                          align-items: center;
+                        "
+                      >
                         <div class="col-xs-6 title">MARKETPLACE</div>
                         <div
                           class="col-xs-6 sub-title-2"
@@ -1154,8 +905,11 @@
                     >
                       <div class="row" style="height: 15px; padding: 0px 16px">
                         <div class="col-xs-6 title">PEOPLE &amp; CULTURE</div>
-                        <div class="col-xs-6 sub-title-2" style="text-align: right">
-                              Business Leadership
+                        <div
+                          class="col-xs-6 sub-title-2"
+                          style="text-align: right"
+                        >
+                          Business Leadership
                         </div>
                       </div>
 
@@ -1292,19 +1046,14 @@
                   class="col-xs-12 margin-bottom padding0"
                   style="margin-top: 10px"
                 >
-                  <div
-                    class="item bg-dark"
-					id="sec4"
-                  >
+                  <div class="item bg-dark" id="sec4">
                     <div
                       class="row"
                       style="height: 100%; width: 100%; padding: 0px 16px"
                     >
                       <div class="col-xs-12 col-md-1 title">Legend</div>
 
-                      <div
-                        class="col-xs-12 col-md-11"
-                      >
+                      <div class="col-xs-12 col-md-11">
                         <div class="my-legend">
                           <div class="legend-scale1">
                             <ul class="legend-labels">
