@@ -43,14 +43,30 @@ require(["js/qlik"], function (qlik) {
 
 
 
+
+
+
+
+
+
+
 	
-		app.bookmark.apply('60d86ae5-76f0-4c12-a757-4bb0df740d6b');
+		app.bookmark.apply('fecea4fa-4973-4d52-a59a-56b5aaa1eb0a');
 	
 	
 	//create cubes and lists -- inserted here --
 
 			//get objects -- inserted here --
 	app.getObject('QV-0-1','76b28306-474b-4094-b551-ed3fe47d3b5a');
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -205,6 +221,7 @@ require(["js/qlik"], function (qlik) {
 	app.getObject('KP-1-17','8157be2d-8742-49f1-ab8e-3cc64e8d2eed');
 	app.getObject('KP-1-18','c8c1ebd8-3268-403d-b148-d8b0353974af');
 	app.getObject('KP-1-19','d4ba6f94-7426-4e6b-9217-fe5ea531051f');
+	app.getObject('KP-3-4','nWgVjWX');
 	app.getObject('KP-1-20','2ade60fe-70f6-417d-865c-266bdafeded3');
 	app.getObject('KP-1-21','4ff54ad9-dc66-4415-950a-cc1f1d241b8a');
 	app.getObject('KP-1-22','2c2e4286-fa4d-4df9-b36e-3d3ca477130a');
@@ -239,6 +256,7 @@ require(["js/qlik"], function (qlik) {
 	app.getObject('T2-1-17','8f21e0e2-0047-4669-aef7-0734f7f9d9b4');
 	app.getObject('T2-1-18','47b48e5e-0e55-4cb4-a7cd-4553ebde78d1');
 	app.getObject('T2-1-19','c4a53e30-846c-43f2-a31a-c2eb3af616d8');
+	app.getObject('T2-3-4','bchKp');
 	app.getObject('T2-1-20','c8c3fe1e-8958-4a78-9863-7ad34db7c3b4');
 	app.getObject('T2-1-21','8caec354-914b-4e2f-a7fc-194085c1a1d7');
 	app.getObject('T2-1-22','a7f3f6df-bd22-4bb6-b72f-3caee9345c01');
@@ -377,85 +395,19 @@ require(["js/qlik"], function (qlik) {
 	app.getObject('G-2-23','gAuFAWh');
 	app.getObject('G-2-24','epaCcJ');
 	app.getObject('G-2-25','nMQbAR');
-	
-
 
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
+	$("#theme").change(function () {
+      qlik.resize();
+    });
+		
+	$("#location").change(function () {
+		qlik.resize();
+	  });
+	  $("a").click(function () {
+		qlik.resize();
+	  });
 	$(".btn-round").click(function() {
 			qlik.resize();
 		});
